@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="grid.css">
+    <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+		<div class="container-title"><img src="fruit.jpg" alt="Fruits" class="responsive-header"> 
+			<div class="centered"><strong>Bio Market</strong></div>
+		<div class="centered-subtitle">Fresh is everything</div>
+		<div class="centered-ofer"><div class="check"></div>&nbsp; Today fresly picked</div>
+		<div class="centered-ofer-two"><div class="check"></div>&nbsp; Rich in vitamins</div>
+		<div class="centered-ofer-three"><div class="check"></div>&nbsp; No chemicals</div>
+	</div>
+	<div id="js-qty-banner" class="hidden"></div>
+        <div id="header">
+				<div class="col-xs-12 col-md-6 col-lg-6 site-name centru">
+					<div class="green" onclick="window.location.href = '/' ">Michael</div> <div class="white">Bio Market</div>
+				</div>
+					<div class="col-xs-12 col-md-4 col-lg-5 site-name">
+						<a href="/">Talcioc</a>
+					</div>
+					<div class="col-xs-12 col-md-4 col-lg-3 no-margin">
+						<button class="cos-cumparaturi" onclick="window.location.href = '/cart.html'">
+							Cart<span id="js-class-count">0</span>
+						</button>
+					</div>
+				</div>
+
+				<div id="adauga-produs">
+            <div class="col-xs-12 col-md-4 col-lg-3 no-margin">
+							<button class="details-save">SALVEAZA</button>
+						</div>
+            <div class="col-xs-12 col-md-2 col-lg-3 no-margin">
+							<button class="cancel" onclick="window.location.href = '/admin.html'">ANULEAZA</button>
+						</div>
+        </div>
+				<div class="flex-box-row" id="js-admin-detail"></div>
+
+				<script src="app.js" type="module"></script>
+</body>
+</html>
