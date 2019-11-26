@@ -1,10 +1,8 @@
 export default class Cart {
 
-	// !!!!this code should be refactored. it's shit!
+	
 	
 	add(product, qty, id) {
-		// the id parameter is to compare the producs and aviod object comparing methods 
-		//which in this case can lead to unwanted behavior
 		const cartContent = sessionStorage.getItem('cart');
 		const inputQty = document.querySelector('.js-quantity');
 		const qtyBanner = document.querySelector('#js-qty-banner');
@@ -13,12 +11,12 @@ export default class Cart {
 		if (parseInt(inputQty.value) > parseInt(stock.textContent)) {
 			qtyBanner.classList.remove('hidden', 'js-added');
 			qtyBanner.classList.add('js-not-added');
-			qtyBanner.textContent = 'There is not enough products in stock. Qty set to the maximum stock';
+			qtyBanner.textContent = 'Cantitatea introdusa depaseste stocul disponibil';
 			setTimeout(() => {
 				qtyBanner.classList.add('hidden', 'js-not-added');
 				qtyBanner.textContent = '';
 			}, 3500);
-			// set the input qty to maximul found in stock
+			
 			inputQty.value = parseInt(stock.textContent);
 		} else {
 			if (cartContent === null) {
@@ -45,10 +43,10 @@ export default class Cart {
 					sessionStorage.setItem('cart', JSON.stringify(rowData));
 				}
 			}
-			// add message - refactor this shit
+			
 			qtyBanner.classList.remove('hidden', 'js-not-added');
 			qtyBanner.classList.add('js-added');
-			qtyBanner.textContent = 'Product succesfully added to cart.';
+			qtyBanner.textContent = 'Produs adaugat cu succes in cosul de cumparaturi.';
 			setTimeout(() => {
 				qtyBanner.classList.add('hidden', 'js-added');
 				qtyBanner.textContent = '';

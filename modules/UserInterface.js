@@ -54,10 +54,10 @@ export default class UserInterface {
 		const details = document.querySelector('#details');
 		if (details) {
 			details.innerHTML = `
-				<div class="col-xs-12 main">
-					<div>
-						<img src="${product.image}" alt="" class="main-pic">
-					</div>
+				<div class="col-xs-12 main d-flex-column-low">
+				<div>
+				<img src="${product.image}" alt="" class="main-pic">
+			</div>
 					<div class="detalii-produs">
 							<h3>${product.title}</h3>
 							<div>${product.description}</div>
